@@ -75,21 +75,12 @@ const CatSchema = new mongoose.Schema({
     required: true,
   },
 
-  createdData: {
+  createdDate: {
     type: Date,
     default: Date.now,
   },
 
 });
-
-// Schema.statics are static methods attached to the Model or objects
-// These DO NOT have their own instance. They are all the static function.
-// They do not look at individual instance variables since there is
-// no instance of them. Every static function
-// only exists once and is called.
-CatSchema.statics.sayName = (cat) => {
-  console.log(cat.name);
-};
 
 // Schema.statics are static methods attached to the Model or objects
 // These DO NOT have their own instance. They are all the static function.

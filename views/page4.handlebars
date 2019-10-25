@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <!-- passed in variables in handlebars are surrounded by two curly braces like the following
+       Any variable you pass into res.render will be available by name in the template through
+       the curly braces
+  -->
+  <title>{{title}}</title>
+</head>
+
+<body>
+  <h1>Doggo List!</h1>
+
+  <a href="/">Home</a>
+  <a href="/page1">Page 1</a>
+  <a href="/page2">Page 2</a>
+  <a href="/page3">Page 3</a>
+  <ul>
+     {{#each dogs}}
+        <li>
+          <strong>Pupper Name:</strong> {{this.name}}
+          <br />
+          <strong># of Birthdays Had:</strong> {{this.age}}
+          <br />
+          <strong>Doggo Breed:</strong> {{this.breed}}
+        </li>
+      {{/each}}
+  </ul>
+</body>
+
+</html>
